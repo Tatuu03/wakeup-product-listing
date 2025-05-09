@@ -14,8 +14,11 @@ This is a full-stack application built as a technical challenge for WakeUp. It a
 ```
 /wakeup-product-listing
 │
-├── backend/           # Node.js + Express API with hardcoded data
-└── wakeup-frontend/   # React frontend (waiter's interface)
+├── backend/             # Node.js + Express API with hardcoded data
+│   ├── src/             # App source code
+│   └── src/tests/       # Jest test files for backend
+│
+└── wakeup-frontend/     # React frontend (waiter's interface)
 ```
 
 ## 📦 Getting Started
@@ -27,6 +30,8 @@ git clone https://github.com/Tatuu03/wakeup-product-listing.git
 cd wakeup-product-listing
 ```
 
+---
+
 ### 2. Setup Backend
 
 ```bash
@@ -37,9 +42,11 @@ npm run dev
 
 > The backend should start on `http://localhost:PORT`
 
+---
+
 ### 3. Setup Frontend
 
-Open a new terminal:
+In a new terminal:
 
 ```bash
 cd wakeup-frontend
@@ -49,6 +56,8 @@ npm start
 
 > The frontend will run on `http://localhost:3000` by default.
 
+---
+
 ## ✅ Features
 
 - Display a list of restaurants and their available products
@@ -57,10 +66,43 @@ npm start
 - Fully typed using TypeScript
 - Clean and intuitive interface
 
+---
+
+## 🧪 Tests
+
+### Backend
+
+We wrote tests using **Jest** and **Supertest** to validate:
+
+- `GET /api/restaurants` returns a paginated list of restaurants
+- `POST /api/orders` accepts valid payloads and rejects invalid ones
+
+To run backend tests:
+
+```bash
+cd backend
+npm test
+```
+
+### Frontend
+
+Includes a basic test using **React Testing Library** to verify that the main interface renders correctly.
+
+To run frontend tests:
+
+```bash
+cd wakeup-frontend
+npm test
+```
+
+---
+
 ## 📝 Assumptions
 
 - All product and restaurant data is mocked directly in the backend.
 - This app is a prototype meant to demonstrate core functionality, not a production-ready solution.
+
+---
 
 ## ✍️ Author
 
