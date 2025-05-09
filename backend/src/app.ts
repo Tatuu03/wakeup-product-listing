@@ -8,7 +8,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://wakeup-product-listing.vercel.app/",
+    origin: "*",
   })
 );
 app.use(express.json());
