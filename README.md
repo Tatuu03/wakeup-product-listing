@@ -2,10 +2,17 @@
 
 This is a full-stack application built as a technical challenge for WakeUp. It allows restaurant waiters to view available products and create an order with multiple items.
 
+## 🌐 Live Demo
+
+- 🖥️ **Frontend:** [https://wakeup-product-listing.vercel.app/](https://wakeup-product-listing.vercel.app/)
+- ⚙️ **Backend API:** [https://wakeup-product-listing-1.onrender.com](https://wakeup-product-listing-1.onrender.com)
+
+> Example endpoint: [GET /api/restaurants](https://wakeup-product-listing-1.onrender.com/api/restaurants)
+
 ## 🚀 Tech Stack
 
-- **Frontend:** React + TypeScript
-- **Backend:** Node.js + Express + TypeScript
+- **Frontend:** React + TypeScript (Vercel)
+- **Backend:** Node.js + Express + TypeScript (Render)
 
 > Note: No database was used. Product and restaurant data is hardcoded for demonstration purposes.
 
@@ -30,9 +37,7 @@ git clone https://github.com/Tatuu03/wakeup-product-listing.git
 cd wakeup-product-listing
 ```
 
----
-
-### 2. Setup Backend
+### 2. Setup Backend Locally
 
 ```bash
 cd backend
@@ -40,13 +45,11 @@ npm install
 npm run dev
 ```
 
-> The backend should start on `http://localhost:PORT`
+> The backend will start on `http://localhost:PORT`
 
----
+### 3. Setup Frontend Locally
 
-### 3. Setup Frontend
-
-In a new terminal:
+Open a new terminal tab:
 
 ```bash
 cd wakeup-frontend
@@ -56,26 +59,23 @@ npm start
 
 > The frontend will run on `http://localhost:3000` by default.
 
----
-
 ## ✅ Features
 
 - Display a list of restaurants and their available products
-- Infinite scroll implementation for product listing
-- Allow waiters to create an order with multiple products
+- Infinite scroll for both restaurants and products
+- Waiters can create an order with multiple selected products
 - Fully typed using TypeScript
-- Clean and intuitive interface
-
----
+- Clean, responsive, and intuitive interface
+- Deployed to cloud (Render + Vercel)
 
 ## 🧪 Tests
 
 ### Backend
 
-We wrote tests using **Jest** and **Supertest** to validate:
+Tests written using **Jest** and **Supertest**:
 
-- `GET /api/restaurants` returns a paginated list of restaurants
-- `POST /api/orders` accepts valid payloads and rejects invalid ones
+- `GET /api/restaurants` returns paginated results
+- `POST /api/orders` handles valid and invalid submissions
 
 To run backend tests:
 
@@ -86,7 +86,7 @@ npm test
 
 ### Frontend
 
-Includes a basic test using **React Testing Library** to verify that the main interface renders correctly.
+A basic test using **React Testing Library** verifies the main interface renders correctly.
 
 To run frontend tests:
 
@@ -95,14 +95,10 @@ cd wakeup-frontend
 npm test
 ```
 
----
-
 ## 📝 Assumptions
 
 - All product and restaurant data is mocked directly in the backend.
 - This app is a prototype meant to demonstrate core functionality, not a production-ready solution.
-
----
 
 ## ✍️ Author
 
