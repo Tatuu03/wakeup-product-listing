@@ -15,7 +15,8 @@ export function RestaurantList({ onSelect }: { onSelect: (r: Restaurant) => void
       const nuevos = pag.data.filter(r => !prev.some(x => x.id === r.id));
       return [...prev, ...nuevos];
     });
-
+    console.log('Fetching restaurant page', page);
+    console.log(`📦 Page ${page} fetched — current items:`, items.map(r => r.id));
     return page < pag.totalPages;
   }, []);
 
@@ -27,7 +28,7 @@ export function RestaurantList({ onSelect }: { onSelect: (r: Restaurant) => void
       <InfiniteScroll
         loadMore={loadMore}
         rootRef={scrollRef}
-        resetKey={resetKey}
+         resetKey="restaurant-scroll"
       >
         <ul style={{ padding: 11, margin: 5, listStyle: 'none' }}>
           {items.map(r => (
