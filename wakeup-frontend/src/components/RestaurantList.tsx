@@ -16,7 +16,6 @@ export function RestaurantList({ onSelect }: { onSelect: (r: Restaurant) => void
       return [...prev, ...nuevos];
     });
     console.log('Fetching restaurant page', page);
-    console.log(`📦 Page ${page} fetched — current items:`, items.map(r => r.id));
     return page < pag.totalPages;
   }, []);
 

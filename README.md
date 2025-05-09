@@ -99,6 +99,7 @@ npm test
 
 - All product and restaurant data is mocked directly in the backend.
 - This app is a prototype meant to demonstrate core functionality, not a production-ready solution.
+- Restaurants and products may appear out of order due to paginated merging during infinite scroll. With more time, I would implement proper sorting post-fetch.
 
 ## ✍️ Author
 
